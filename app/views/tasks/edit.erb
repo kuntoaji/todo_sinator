@@ -1,0 +1,8 @@
+<h1>Edit Task <%= @task.name %></h1>
+<form action="/tasks" method="post">
+  <%= Rack::Csrf.tag(env) %>
+  <input name="_method" type="hidden" value="put" />
+  <input name="id" type="hidden" value=<%= @task.id %> />
+  Name: <input type="text" name="name" />
+  <button>Submit</button>
+</form>

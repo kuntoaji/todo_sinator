@@ -1,0 +1,6 @@
+development:
+  adapter: postgres
+  host: localhost
+  database: todo_melodiest
+  user: my_example_user
+  password: my_example_password

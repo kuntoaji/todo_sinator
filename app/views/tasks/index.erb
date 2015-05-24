@@ -1,0 +1,20 @@
+<h1>Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.name %> | <a href="/tasks/edit/<%= task.id %>">Edit</a>
+      <form action="/tasks" method="post">
+        <%= Rack::Csrf.tag(env) %>
+        <input name="_method" type="hidden" value="delete" />
+        <input name="id" type="hidden" value=<%= task.id %> />
+        <button>Delete</button>
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/tasks" method="post">
+  <%= Rack::Csrf.tag(env) %>
+  <input type="text" name="name" />
+  <button>Submit</button>
+</form>
