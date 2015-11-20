@@ -1,8 +1,4 @@
 class TodoMelodiest
-  get '/' do
-    "hello world!"
-  end
-
   get '/tasks' do
     @tasks = Task.all
     erb :'tasks/index'

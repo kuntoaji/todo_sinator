@@ -1,9 +1,5 @@
-ENV['RACK_ENV'] ||= 'development'
+require File.expand_path('../config/boot.rb', __FILE__)
+require Melodiest::ROOT + '/todo_melodiest'
+require Melodiest::ROOT + '/config/application'
 
-require 'rubygems'
-require 'bundler'
-
-Bundler.require :default, ENV['RACK_ENV'].to_sym
-
-require './todo_melodiest'
 run TodoMelodiest

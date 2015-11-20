@@ -3,6 +3,6 @@
   <%= Rack::Csrf.tag(env) %>
   <input name="_method" type="hidden" value="put" />
   <input name="id" type="hidden" value=<%= @task.id %> />
-  Name: <input type="text" name="name" />
+  Name: <input type="text" name="name" value=<%= @task.name %> />
   <button>Submit</button>
 </form>

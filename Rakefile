@@ -1,14 +1,15 @@
-require 'sequel'
-require 'yaml'
+require_relative 'config/boot'
+require_relative 'todo_melodiest'
+require 'sinatra/asset_pipeline/task'
 
-env = ENV['RACK_ENV'] || 'development'
+Sinatra::AssetPipeline::Task.define! TodoMelodiest
 
 namespace :db do
   desc "Run migrations"
   task :migrate, [:version] do |t, args|
     Sequel.extension :migration
-    db = Sequel.connect(YAML.load_file(File.expand_path("../config/database.yml", __FILE__))[env])
-    migration_path = File.expand_path("../db/migrations", __FILE__)
+    db = Sequel.connect(YAML.load_file("#{Melodiest::ROOT}/config/database.yml")[ENV['RACK_ENV']])
+    migration_path = "#{Melodiest::ROOT}/db/migrations"
 
     if args[:version]
       puts "Migrating to version #{args[:version]}"
