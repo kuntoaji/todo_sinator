@@ -1,4 +1,4 @@
-class TodoMelodiest
+class TodoSinator
   get '/tasks' do
     @tasks = Task.all
     erb :'tasks/index'

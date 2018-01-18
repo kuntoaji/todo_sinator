@@ -1,6 +1,8 @@
+# http://sequel.jeremyevans.net/rdoc/files/doc/opening_databases_rdoc.html
+#
 development:
   adapter: postgres
   host: localhost
-  database: todo_melodiest
-  user: my_example_user
-  password: my_example_password
+  database: todo_development
+  username: exampleuser
+  password: examplepwd
