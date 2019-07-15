@@ -6,7 +6,7 @@
       <form action="/tasks" method="post">
         <%= Rack::Csrf.tag(env) %>
         <input name="_method" type="hidden" value="delete" />
-        <input name="id" type="hidden" value=<%= task.id %> />
+        <input name="id" type="hidden" value="<%= task.id %>" />
         <button>Delete</button>
       </form>
     </li>
