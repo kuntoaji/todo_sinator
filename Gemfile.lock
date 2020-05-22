@@ -12,7 +12,7 @@ GEM
     mustermann (1.0.3)
     nio4r (2.5.2)
     pg (1.1.4)
-    puma (4.3.1)
+    puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.0.8)
     rack-protection (2.0.5)
@@ -70,7 +70,7 @@ PLATFORMS
 
 DEPENDENCIES
   encrypted_cookie (= 0.0.5)
-  puma (= 4.3.1)
+  puma (= 4.3.5)
   rack_csrf (= 2.6.0)
   sass (= 3.7.4)
   sequel (= 5.22.0)
