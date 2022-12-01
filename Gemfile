@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', '2.0.5'
-gem 'sinatra-contrib', '2.0.5', require: false
+gem 'sinatra', '3.0.4'
+gem 'sinatra-contrib', '3.0.4', require: false
 gem 'encrypted_cookie', '0.0.5'
 gem 'rack_csrf', '2.6.0', require: 'rack/csrf'
 gem 'puma', '4.3.1'
